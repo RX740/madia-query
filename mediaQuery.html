@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" type="text/css" href="flex.css">
+
+
+<style>
+    .container{
+        display: flex;
+        background-color: darkcyan;
+        border: 5px black solid;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        height: 800px;
+        justify-content: center;
+        align-items: center;
+        overflow-x:scroll;    
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+    }
+    .box{
+        position: relative;
+        width:300px;
+        height: 300px;
+      
+        border: 3px black solid;
+        
+    }
+    #box1{
+        display: flex;
+        flex-direction: column;
+        background-color: chartreuse;   
+        justify-content: space-around;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between ;
+    }
+    p{
+        border: 3px solid white;
+        padding: 3px;
+        margin: 10px 3px;
+    }
+    .button{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 5px;;
+    }
+    #box2{
+      
+        background-color: rgb(0, 255, 200);
+    
+    }
+
+    img{
+        
+        width:300px;
+        height: 300px;
+    }
+
+    
+
+    @media(max-width:645px){
+        .container{
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+         
+        }
+
+        .card{
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .nav-link{
+            display: none;
+
+        }
+
+        .nav{
+             justify-content: center;
+        }
+
+        footer{
+            height: auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="logo">
+            <h2>MyFlexBox</h2>
+        </div>
+        <div class="nav-link">
+            <span class="nav-button" id="home"><a href="#">HOME</a></span>
+            <span class="nav-button" id="project"><a href="#">PROJECTS</a></span>
+            <span class="nav-button" id="contact"><a href="#">CONTACT ME</a></span>
+            <span class="nav-button" id="login"><a href="#">LOG IN</a></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card"> 
+            <div class="box" id="box1">
+                <div class="info">
+                    <p>RAJENDRA CHAUDHARI</p>
+                    <P>I am computer engineer. I love coding. rigth now i am preparing for interview.
+                         i just started my preparation for DSA + MERN stack development </P>    
+                </div>
+                <div class="button">
+                    <button>See My Project</button>
+                    <button>Contact Me</button>
+                </div>
+                 
+            </div>
+            <div class="box" id="box2">
+                <img src="myphoto.png" alt="my image"/>
+            </div>
+        </div>   
+    </div>
+    <footer>
+        <h4>Copyrigth &copy 2023 crocx, Inc. -All Rights Reserved. </h4>
+    </footer>
+</body>
+</html>
