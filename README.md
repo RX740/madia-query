@@ -1,1 +1,1 @@
-# madia-query
+# flex-madia-query
